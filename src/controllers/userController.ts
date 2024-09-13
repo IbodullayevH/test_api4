@@ -1,8 +1,7 @@
+import { Users } from './../entity/Users';
 import { typeormConfig } from "../config/index";
-import { Users } from "../entity/index";
 import { NextFunction, Request, Response } from "express";
-// import { typeormConfig } from "@config";
-// import { User } from "@entity";
+
 
 export class userController {
 
@@ -67,6 +66,8 @@ export class userController {
 
         try {
             const userModel = typeormConfig.getRepository(Users)
+            
+            
             let dataUsers = await userModel.find()
 
             return res.status(200).send({
