@@ -2,11 +2,11 @@ import { Iusers } from "interfaces";
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 // import { Iusers } from "@interfaces";
 
-@Entity({ name: "Users" })
-export class User implements Iusers {
+@Entity()
+export class Users implements Iusers {
 
     @PrimaryGeneratedColumn()
-    id: number | undefined; // Avtomatik yaratiladigan id
+    id: number | undefined; 
 
     @Column({ type: 'varchar', length: 100 })
     fullName: string; // To'liq ism

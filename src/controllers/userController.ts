@@ -1,5 +1,5 @@
 import { typeormConfig } from "@config/typeorm";
-import { User } from "@entity/Users";
+import { Users } from "@entity/index";
 import { NextFunction, Request, Response } from "express";
 // import { typeormConfig } from "@config";
 // import { User } from "@entity";
@@ -12,7 +12,7 @@ export class userController {
         try {
             let { fullName, email, password, userName, phoneNumber } = req.body
 
-            let userModel = typeormConfig.getRepository(User)
+            let userModel = typeormConfig.getRepository(Users)
             let existUser = await userModel.findOne({
                 where: [
                     { email: email },
@@ -66,7 +66,7 @@ export class userController {
     static async userGet(req: Request, res: Response, next: NextFunction) {
 
         try {
-            const userModel = typeormConfig.getRepository(User)
+            const userModel = typeormConfig.getRepository(Users)
             let dataUsers = await userModel.find()
 
             return res.status(200).send({

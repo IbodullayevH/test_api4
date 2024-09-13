@@ -1,4 +1,4 @@
-import { User } from "@entity/Users";
+import { Users } from "@entity/Users";
 import dotenv from "dotenv";
 dotenv.config();
 import { DataSource } from 'typeorm';
@@ -14,7 +14,7 @@ const typeormConfig = new DataSource({
   ssl: {
     rejectUnauthorized: false  // SSL sozlamasi
   },
-  entities: [User],
+  entities: [Users],
   synchronize: false,
   logging: false,
 });
