@@ -1,6 +1,7 @@
 import { DataSource } from 'typeorm';
 import dotenv from 'dotenv';
 dotenv.config();
+import { Users } from '../entity';
 
 const typeormConfig = new DataSource({
   type: process.env.TYPE as 'postgres',
@@ -12,7 +13,7 @@ const typeormConfig = new DataSource({
   ssl: {
     rejectUnauthorized: false
   },
-  entities: [__dirname + '/../dist/entity/**/*.js'],  // dist papkasidan yuklash
+  entities: [Users], 
   synchronize: false,
   logging: false,
 });
