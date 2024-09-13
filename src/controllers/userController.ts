@@ -1,5 +1,5 @@
-import { typeormConfig } from "@config/typeorm";
-import { Users } from "@entity/index";
+import { typeormConfig } from "../config/index";
+import { Users } from "../entity/index";
 import { NextFunction, Request, Response } from "express";
 // import { typeormConfig } from "@config";
 // import { User } from "@entity";

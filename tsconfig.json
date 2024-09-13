@@ -5,11 +5,6 @@
     "rootDir": "./src",
     "outDir": "./dist",
     "baseUrl": "./src",
-    "paths": {
-      "@config/*": ["./config/*"],
-      "@interfaces/": ["./interfaces/*"],
-      "@entity/*": ["./entity/*"]
-    },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

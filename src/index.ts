@@ -3,7 +3,7 @@ import dotenv from "dotenv"
 dotenv.config()
 // import { typeormConfig } from "@config"
 import { router } from "./routes"
-import { typeormConfig } from "@config/typeorm"
+import { typeormConfig } from "./config/index"
 
 const app: Application = express()
 

@@ -1,4 +1,4 @@
-import { Users } from "@entity/Users";
+import { Users } from "../entity/index";
 import dotenv from "dotenv";
 dotenv.config();
 import { DataSource } from 'typeorm';
